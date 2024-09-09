@@ -27,7 +27,7 @@ class LogUp : AppCompatActivity() {
                    password.equals(binding.password.text.toString())){
                    binding.edtusername.text.clear()
                    binding.password.text.clear()
-                   val activity_file_maniger = Intent(this,FileManiger::class.java)
+                   val activity_file_maniger = Intent(this,FileManagerActivity::class.java)
                    startActivity(activity_file_maniger)
                }else{
                    Toast.makeText(this,"please curect password or username",Toast.LENGTH_LONG)

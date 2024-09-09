@@ -1,5 +1,4 @@
 package com.mohammad.project
-import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
@@ -26,7 +25,7 @@ class LogIn : AppCompatActivity() {
             binding.pass.text.clear()
             DataUser().saveData(datauser, username, pass)
             DataUser().setObjectData(datauser)
-            val go_file_maniger = Intent(this, FileManiger::class.java)
+            val go_file_maniger = Intent(this, FileManagerActivity::class.java)
             startActivity(go_file_maniger)
         }
         binding.loguppage.setOnClickListener{
