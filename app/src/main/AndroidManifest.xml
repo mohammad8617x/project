@@ -17,15 +17,14 @@
         android:theme="@style/Theme.Project"
         tools:targetApi="31">
         <activity
-            android:name=".FileManiger"
+            android:name=".FileManagerActivity"
             android:exported="false" />
         <activity
-            android:name=".LogUp"
+            android:name=".LoginActivityV2"
             android:exported="false" />
         <activity
-            android:name=".LogIn"
+            android:name=".SignUpActivityV2"
             android:exported="true"
-            android:label="@string/app_name"
             android:theme="@style/Theme.Project">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
