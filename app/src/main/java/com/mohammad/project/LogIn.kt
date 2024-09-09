@@ -8,7 +8,7 @@ import com.mohammad.project.pakagel_log_in.DataUser
 
 
 class LogIn : AppCompatActivity() {
-    val datauser = getSharedPreferences("all_data", Context.MODE_PRIVATE)
+
     private lateinit var binding: ActivityLogInBinding
     private var username =""
     private var pass = ""
@@ -16,6 +16,7 @@ class LogIn : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityLogInBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        val datauser = getSharedPreferences("all_data", MODE_PRIVATE)
 
         binding.btmLoginpage.setOnClickListener {
 
@@ -24,13 +25,12 @@ class LogIn : AppCompatActivity() {
             binding.username.text.clear()
             binding.pass.text.clear()
             DataUser().saveData(datauser, username, pass)
+            DataUser().setObjectData(datauser)
             val go_file_maniger = Intent(this, FileManiger::class.java)
-            finish()
             startActivity(go_file_maniger)
         }
         binding.loguppage.setOnClickListener{
             val activitylogup = Intent(this,LogUp::class.java)
-           finish()
             startActivity(activitylogup)
         }
    }
